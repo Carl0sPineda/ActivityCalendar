@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background:rgb(80, 80, 80);
+}
+
+::-webkit-scrollbar-thumb {
+  background:rgb(199, 198, 198);
+}
+
+.fc-toolbar-title {
+    color: rgb(214, 168, 168);
+    text-transform: uppercase;
+}
+
+.fc-direction-ltr {
+    color: white;
+    margin: auto;
+    width: 97%;
+    padding-bottom: 2rem;
+}
