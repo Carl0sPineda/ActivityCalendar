@@ -40,7 +40,7 @@ function Home() {
   };
 
   return (
-    <div className="bg-slate-950 py-3 relative">
+    <div className="bg-slate-950 py-3">
       <button
         onClick={openModal}
         aria-label="agregar"
@@ -51,13 +51,13 @@ function Home() {
       <AddEventModal isOpen={modalIsOpen} closeModal={closeModal} />
       <FullCalendar
         plugins={[dayGridPlugin]}
-        initialView="dayGridMonth"
+        initialView="dayGridYear"
         headerToolbar={{
           left: "prev,next,today",
           center: "title",
           right: "dayGridYear,dayGridMonth,dayGridWeek,dayGridDay",
         }}
-        events={events?.map((event: any) => ({
+        events={events?.map((event) => ({
           id: event.ID,
           title: event.Title,
           start: event.Start,
