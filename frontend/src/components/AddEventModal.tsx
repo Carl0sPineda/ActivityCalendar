@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useAddEvent } from "../hooks/events.mutations";
 import { z } from "zod";
+import { toast } from "sonner";
 
 interface EventsForm {
   Title: string;
@@ -51,8 +52,9 @@ const AddEventModal = ({ isOpen, closeModal }: AddEventModalProps) => {
       await addEventMutation.mutateAsync(data);
       reset();
       closeModal();
+      toast.success("Datos agregados correctamente!");
     } catch (error) {
-      console.error("Error adding user:", error);
+      toast.error("Ha ocurrido un error!");
     }
   };
 

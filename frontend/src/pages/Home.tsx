@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useGetEvents } from "../hooks/events.queries";
 import { useDeleteEvent } from "../hooks/events.mutations";
 import { EventClickArg } from "@fullcalendar/core";
+import { toast } from "sonner";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import FullCalendar from "@fullcalendar/react";
 import esLocale from "@fullcalendar/core/locales/es";
@@ -35,8 +36,9 @@ const Home = () => {
   const onDelete = async (id: string) => {
     try {
       await deleteEventMutation.mutateAsync(id);
+      toast.success("Datos eliminados con éxito!");
     } catch (error) {
-      console.error("Error deleting event:", error);
+      toast.error("Ha ocurrido un error!");
     }
   };
 
