@@ -9,7 +9,7 @@ import AddEventModal from "../components/AddEventModal";
 import Swal from "sweetalert2";
 import plus from "../assets/plus.svg";
 
-function Home() {
+const Home = () => {
   const { data: events } = useGetEvents();
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
   const deleteEventMutation = useDeleteEvent();
@@ -77,6 +77,6 @@ function Home() {
       />
     </div>
   );
-}
+};
 
 export default Home;

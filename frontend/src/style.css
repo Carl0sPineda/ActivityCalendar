@@ -31,6 +31,7 @@
 }
 
 .fc-event-title-container{
+  cursor: pointer;
   color: white;
   background: rgb(62, 60, 63);
 }
