@@ -57,20 +57,17 @@ const PrivateRoute = () => {
               type="password"
               placeholder="código"
               className={`mt-2 shadow-md focus:outline-none rounded-2xl py-3 px-6 block w-full ${
-                errors.password ? "border-red-500" : ""
+                errors.password ? "border-red-200" : ""
               }`}
               {...register("password")}
             />
             {errors.password && (
-              <span className="text-red-500 block">
+              <span className="text-red-200 block">
                 {errors.password.message}
               </span>
             )}
-            <button
-              type="submit"
-              className="bg-black px-4 py-2 mt-2 ml-2 text-gray-200 rounded-lg"
-            >
-              Submit
+            <button className="bg-black hover:bg-slate-950 ease-in-out duration-200 px-4 py-2 mt-2 ml-2 text-gray-200 rounded-lg">
+              Ingresar
             </button>
           </form>
           <div className="text-left absolute top-10 rounded-t-none rounded-b-2xl shadow bg-white divide-y w-full max-h-40 overflow-auto"></div>

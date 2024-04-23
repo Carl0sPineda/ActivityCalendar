@@ -30,14 +30,23 @@
     padding-bottom: 2rem;
 }
 
-.fc-event-title-container{
+.fc-event-title-container {
   cursor: pointer;
   color: white;
   background: rgb(62, 60, 63);
+  transition: background 0.3s ease; 
 }
 
 .fc-h-event {
   background: rgb(62, 60, 63);
-  border: 1px solid  rgb(62, 60, 63);
+  border: 1px solid rgb(62, 60, 63);
+  transition: background 0.3s ease; 
 }
 
+.fc-event-title-container:hover {
+  background: rgb(72, 70, 73); 
+}
+
+.fc-h-event:hover {
+  background: rgb(72, 70, 73);
+}

@@ -20,7 +20,7 @@ const schemaEvent = z.object({
     .string()
     .min(1, "Este campo es requerido")
     .trim()
-    .max(27, "Debe ser menos de 27 caracteres")
+    .max(30, "Debe ser menos de 30 caracteres")
     .regex(/^[^<>&]*$/, "Scripts o caracteres especiales no son permitidos"),
   Start: z
     .string()
@@ -63,10 +63,10 @@ const AddEventModal = ({ isOpen, closeModal }: AddEventModalProps) => {
       {isOpen && (
         <div className="fixed inset-0 z-10 flex items-center justify-center">
           <div
-            className="absolute inset-0 bg-black opacity-50"
+            className="absolute inset-0 bg-black opacity-60 filter blur-4xl"
             onClick={closeModal}
           />
-          <div className="bg-gray-950 text-white p-8 rounded shadow-md z-20 slide-in-fwd-top">
+          <div className="bg-gray-950 text-white p-8 rounded border border-slate-500 shadow-md z-20 slide-in-fwd-top">
             <h2 className="text-xl font-bold mb-4">Agregar Evento</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="max-w-md">
               <div className="mb-2">
@@ -119,7 +119,7 @@ const AddEventModal = ({ isOpen, closeModal }: AddEventModalProps) => {
                   )}
                 </div>
               </div>
-              <button className="bg-blue-700 px-4 py-2 mt-4 rounded text-white">
+              <button className="bg-blue-900 hover:bg-blue-800 ease-in-out duration-300 px-4 py-2 mt-4 font-bold rounded text-white">
                 Agregar
               </button>
             </form>
