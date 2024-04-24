@@ -54,6 +54,7 @@ const PrivateRoute = () => {
         <div className="relative z-30 text-base text-black">
           <form onSubmit={handleSubmit(handleLogin)}>
             <input
+              autoFocus
               type="password"
               placeholder="código"
               className={`mt-2 shadow-md focus:outline-none rounded-2xl py-3 px-6 block w-full ${
