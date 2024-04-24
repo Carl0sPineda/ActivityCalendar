@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useAddEvent } from "../hooks/events.mutations";
-import { z } from "zod";
 import { toast } from "sonner";
+import { z } from "zod";
 
 interface EventsForm {
   Title: string;
@@ -71,6 +71,7 @@ const AddEventModal = ({ isOpen, closeModal }: AddEventModalProps) => {
             <form onSubmit={handleSubmit(onSubmit)} className="max-w-md">
               <div className="mb-2">
                 <input
+                  autoFocus
                   type="text"
                   {...register("Title")}
                   className={`focus:outline-none text-white bg-slate-800 w-full px-2 py-1 rounded ${
