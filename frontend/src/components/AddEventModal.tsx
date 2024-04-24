@@ -46,6 +46,7 @@ const AddEventModal = ({ isOpen, closeModal }: AddEventModalProps) => {
     resolver: zodResolver(schemaEvent),
   });
   const addEventMutation = useAddEvent();
+  const currentDate = new Date().toISOString().split("T")[0];
 
   const onSubmit = async (data: EventsForm) => {
     try {
@@ -91,6 +92,7 @@ const AddEventModal = ({ isOpen, closeModal }: AddEventModalProps) => {
                   <input
                     type="date"
                     {...register("Start")}
+                    defaultValue={currentDate}
                     className={`focus:outline-none text-white bg-slate-800 w-full px-2 py-1 rounded ${
                       errors.Start && "border-red-500"
                     }`}
@@ -107,6 +109,7 @@ const AddEventModal = ({ isOpen, closeModal }: AddEventModalProps) => {
                   <input
                     type="date"
                     {...register("End")}
+                    defaultValue={currentDate}
                     className={`focus:outline-none text-white bg-slate-800 w-full px-2 py-1 rounded ${
                       errors.End && "border-red-500"
                     }`}
