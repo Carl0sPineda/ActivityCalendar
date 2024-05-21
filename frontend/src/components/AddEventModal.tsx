@@ -46,7 +46,7 @@ const AddEventModal = ({ isOpen, closeModal }: AddEventModalProps) => {
     resolver: zodResolver(schemaEvent),
   });
   const addEventMutation = useAddEvent();
-  const currentDate = new Date().toISOString().split("T")[0];
+  const currentDate = new Date().toLocaleDateString("sv-SE");
 
   const onSubmit = async (data: EventsForm) => {
     try {
