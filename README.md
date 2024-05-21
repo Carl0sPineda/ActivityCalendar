@@ -1,19 +1,12 @@
-# README
+# ActivityCalendar
 
-## About
+An innovative platform designed to help you manage your activities efficiently and securely through an integrated calendar with advanced functionalities.
 
-This is the official Wails React-TS template.
+![alt text](frontend/src/assets/calendar.png)
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+## Features
 
-## Live Development
-
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
-
-## Building
-
-To build a redistributable, production mode package, use `wails build`.
+- **Add Activities**: Add new activities to your calendar easily.
+- **List Activities**: View all your activities in a clear and organized format by year, month, week and day.
+- **Delete Activities**: Delete activities that are no longer necessary with ease.
+- **Secure Storage**: All information about your activities is stored encrypted to guarantee your privacy and security.
